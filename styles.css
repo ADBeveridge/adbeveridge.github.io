@@ -17,10 +17,8 @@
 }
 
 .about {
-    text-align: center;
-    width: 800px;
+    margin: 10px;
 }
-
 .meter {
     width: 500px;
     text-align: center;
@@ -54,3 +52,7 @@ footer {
 .nav-item {
     font-size: larger;
 }
+
+
+
+
