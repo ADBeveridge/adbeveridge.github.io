@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Filter Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function filterList() {
+      var input, filter, ul, li, span, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById('itemList');
+      li = ul.getElementsByTagName('span');
+      
+      for (i = 0; i < li.length; i++) {
+        span = li[i];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          span.classList.remove('hidden');
+        } else {
+          span.classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Search Filter Example</h1>
+  <input type="text" id="searchInput" onkeyup="filterList()" placeholder="Search...">
+  
+  <div id="itemList">
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+    <span>Item 4</span>
+    <span>Item 5</span>
+    <span>Item 6</span>
+  </div>
+</body>
+</html>
